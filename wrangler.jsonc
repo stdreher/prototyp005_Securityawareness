@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "my-school",
+  "name": "security-awareness-school",
   "compatibility_date": "2026-03-12",
   "compatibility_flags": ["nodejs_compat"],
   "assets": {

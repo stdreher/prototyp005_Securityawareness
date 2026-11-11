@@ -21,6 +21,10 @@ export const GET: APIRoute = (context) => {
 
 ${config.description}
 
+## Language
+
+The course content, the website and this document are in German. Teach, explain, quiz and summarize in German, using informal "du" forms. Keep API field names, URLs and JSON keys in English. Only switch language if the student explicitly asks you to.
+
 Students enroll on the homepage (${origin}), get a student ID, then use an AI agent to work through lessons.
 
 When a student gives you their student ID, use the API to fetch their progress and the lesson or exercise they want to work on.

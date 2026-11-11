@@ -1,9 +1,9 @@
 {
-  "name": "school-template",
+  "name": "security-awareness-school",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
-  "description": "Template for building interactive, agent-driven schools on any topic",
+  "description": "Security-Awareness-Kurs für alle im Unternehmen: Phishing erkennen, Zugänge schützen, Vorfälle melden",
   "license": "Apache-2.0",
   "homepage": "https://github.com/opencodeschool/school-template",
   "repository": {

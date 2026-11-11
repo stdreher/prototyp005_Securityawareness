@@ -1,0 +1,113 @@
+---
+title: "Zugänge schützen"
+slug: zugaenge-schuetzen
+description: "Passwörter, Passkeys und Zwei-Faktor: was wirklich hilft und was nur alt ist."
+order: 4
+quiz: true
+agentInstructions: |
+  Teach in German, even though these notes are in English.
+
+  Cover these four topics:
+
+  1. Why length beats complexity and why reuse is the actual danger.
+     Explain credential stuffing: one leaked password from an old shop
+     account is tried automatically against hundreds of other services.
+     Contrast a short cryptic password with a long passphrase of several
+     words, and explain that remembering many strong unique passwords is
+     not a human skill.
+
+  2. What a password manager actually solves: it generates and stores
+     unique passwords, fills them only on the matching domain, and removes
+     the temptation to reuse. Explain the mental model (one strong master
+     password plus a locked box) and address the common worry about
+     "putting all eggs in one basket" honestly, including that the master
+     password and recovery must be protected.
+
+  3. Multi-factor authentication: the three factor types (know, have, are),
+     why two factors from different categories are stronger, why SMS codes
+     are weaker than an authenticator app, and how push fatigue works.
+     Explain number matching as a countermeasure and why approving an
+     unexpected push is itself a reportable event.
+
+  4. Passkeys and outdated password rules. Explain passkeys as
+     phishing-resistant because the credential is cryptographically bound
+     to the real domain, so a fake login page cannot use it. Then state
+     which old rules no longer apply (forced rotation every 90 days,
+     mandatory special characters and mixed case) and what replaced them:
+     length, uniqueness, and a second factor. Note that company policy
+     always wins over general advice.
+---
+
+## Das Problem mit dem einen Passwort
+
+Die meisten Menschen haben ein gutes Passwort. Sie benutzen es überall.
+
+Das ist der Kern des Problems. Wenn irgendein Dienst — ein Onlineshop von 2014, ein Forum, eine App — gehackt wird und Passwörter abfließen, dann sind diese Passwörter nicht nur dort bekannt. Sie werden automatisch gegen Hunderte andere Dienste ausprobiert. Dieses Verfahren heißt **Credential Stuffing** und braucht keinen Menschen, nur eine Liste.
+
+Der Angreifer muss dich also nicht knacken. Er muss nur warten, bis irgendwo anders ein Leck passiert.
+
+## Länge schlägt Komplexität
+
+Die alte Regel lautete: mindestens acht Zeichen, Groß- und Kleinbuchstaben, Zahlen, Sonderzeichen, und alle 90 Tage wechseln. Das Ergebnis waren Passwörter wie `Sommer2024!`, die man sich merken kann und die ein Rechner in Sekunden errät.
+
+Die heutige Empfehlung — unter anderem von NIST und BSI — ist langweiliger und wirksamer: **lang** und **einzigartig**. Ein Satz aus vier zufälligen Wörtern ist leichter zu merken und schwerer zu erraten als acht Zeichen Salat.
+
+Beispiel gefällig? `Kaffee-Tuerklinke-Radweg-Mond` ist lang, merkbar und deutlich stärker als `P@ssw0rd!`.
+
+Das eigentliche Problem bleibt aber die Wiederverwendung. Und das löst kein noch so gutes Passwort, sondern nur ein Werkzeug.
+
+## Der Passwortmanager
+
+Ein Passwortmanager ist ein Safe mit einem einzigen Schlüssel. Du merkst dir ein starkes Master-Passwort, alles andere erledigt der Safe: Er erzeugt zufällige Passwörter, speichert sie, und füllt sie nur auf der Seite ein, für die sie gedacht sind.
+
+Das ist der unterschätzte Teil. Ein Passwortmanager prüft die Domain, bevor er etwas einträgt. Auf `firma.de.sicherheit-login.com` bleibt er leer, weil das nicht `firma.de` ist. Er ist damit auch ein Phishing-Schutz.
+
+Die übliche Sorge: „Dann hat jemand mit dem Master-Passwort alles.“ Das stimmt — und deshalb ist das Master-Passwort das eine Passwort, das du wirklich gut machen musst. Für die meisten Menschen ist das Risiko trotzdem deutlich kleiner als das Risiko, das gleiche Passwort überall zu nutzen.
+
+Wenn dein Arbeitgeber einen Passwortmanager stellt: nutze ihn. Wenn nicht, kläre vorher, ob du einen privaten Manager für berufliche Zugänge verwenden darfst.
+
+## Zwei Faktoren, bitte
+
+Ein zweiter Faktor heißt: Zum Passwort kommt etwas dazu, das nicht im selben Datenleck stecken kann. Es gibt drei Arten:
+
+- **Wissen** — Passwort, PIN
+- **Besitz** — Smartphone, Sicherheitsschlüssel, Chipkarte
+- **Sein** — Fingerabdruck, Gesicht
+
+Zwei Faktoren aus **verschiedenen** Kategorien sind der Sinn der Sache. Passwort plus PIN ist kein zweiter Faktor, das sind zwei Passwörter.
+
+Unterschiede bei der Qualität:
+
+| Methode | Bewertung |
+| --- | --- |
+| SMS-Code | Besser als nichts, aber anfällig für Nummerntausch |
+| Authenticator-App (TOTP) | Gut, Code läuft nach 30 Sekunden ab |
+| Push-Bestätigung | Gut, aber anfällig für Müdigkeitsangriffe |
+| Sicherheitsschlüssel / Passkey | Am stärksten, weil an die Domain gebunden |
+
+**MFA-Müdigkeit** ist ein realer Angriff: Der Angreifer hat dein Passwort und schickt dir so lange Bestätigungsanfragen, bis du aus Reflex auf „Zulassen“ tippst. Gegenmaßnahme ist **Number Matching**: Du musst eine Zahl vom Bildschirm in der App eintippen, die der Angreifer nicht sieht.
+
+Eine Regel dazu: **Eine Bestätigungsanfrage, die du nicht erwartest, ist ein Vorfall.** Nicht wegtippen, sondern melden.
+
+## Passkeys: der Ausweg aus dem Passwort-Dschungel
+
+Ein **Passkey** ist ein Schlüsselpaar. Der private Teil bleibt auf deinem Gerät, der öffentliche Teil liegt beim Dienst. Beim Anmelden beweist dein Gerät kryptografisch, dass es zu dieser einen Domain gehört.
+
+Der entscheidende Vorteil: Eine nachgebaute Login-Seite kann den Passkey nicht verwenden, weil sie eine andere Domain ist. Passkeys sind damit **phishing-resistent** — nicht weil sie bequemer sind, sondern weil der Betrug technisch nicht funktioniert.
+
+Wo es geht: aktivieren. Wo es nicht geht: Passwortmanager plus App-basierter zweiter Faktor.
+
+## Was du heute tun kannst
+
+1. Prüfe, ob deine E-Mail-Adresse in einem bekannten Datenleck auftaucht, und ändere betroffene Passwörter.
+2. Aktiviere Zwei-Faktor-Anmeldung bei E-Mail, Bank und allem, wo es um Geld oder Identität geht.
+3. Fange mit einem Passwortmanager an — nicht mit allen 200 Konten, sondern mit den zehn wichtigsten.
+
+## Kurz gemerkt
+
+- Wiederverwendung ist gefährlicher als ein „schwaches“ Passwort.
+- Länge und Einzigartigkeit schlagen Sonderzeichen.
+- Ein Passwortmanager schützt auch vor Phishing, weil er die Domain prüft.
+- Zwei Faktoren müssen aus verschiedenen Kategorien kommen.
+- Passkeys sind phishing-resistent, nicht nur bequem.
+- Eine unerwartete Bestätigungsanfrage ist ein Meldefall.

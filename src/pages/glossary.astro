@@ -4,22 +4,77 @@ export const prerender = true;
 import Base from "../layouts/Base.astro";
 ---
 
-<Base title="Glossary" description="Definitions of common terms used in this school.">
+<Base title="Glossar" description="Kurze Erklärungen der wichtigsten Begriffe aus diesem Kurs.">
   <div class="mb-6">
     <a href="/" class="text-sm text-gray-500 dark:text-gray-500 hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
-      &larr; Home
+      &larr; Startseite
     </a>
   </div>
 
   <header class="mb-8">
-    <h1 class="text-3xl font-bold">Glossary</h1>
-    <p class="text-gray-600 dark:text-gray-400 mt-2">Definitions of common terms used in this school.</p>
+    <h1 class="text-3xl font-bold">Glossar</h1>
+    <p class="text-gray-600 dark:text-gray-400 mt-2">Kurze Erklärungen der wichtigsten Begriffe aus diesem Kurs.</p>
   </header>
 
   <article class="prose dark:prose-invert max-w-none">
-    <!-- Add glossary terms here as you create lesson content. Example: -->
-    <!-- <h2 id="term">Term</h2> -->
-    <!-- <p>Definition of the term.</p> -->
-    <p class="text-gray-500 dark:text-stone-500 italic">No glossary terms yet. Add them as you create lesson content.</p>
+    <h2 id="phishing"><a href="#phishing" class="heading-anchor">Phishing</a></h2>
+    <p>
+      Betrug per E-Mail, Chat oder Webseite, bei dem Angreifer dich dazu bringen wollen, auf einen Link zu klicken, Daten einzugeben oder einen Anhang zu öffnen. Der Name kommt vom englischen „fishing“ (fischen): Es wird ein Köder ausgelegt, und du sollst anbeißen.
+    </p>
+
+    <h2 id="social-engineering"><a href="#social-engineering" class="heading-anchor">Social Engineering</a></h2>
+    <p>
+      Menschen gezielt manipulieren, statt Technik zu hacken. Angreifer spielen Vertrauen, Autorität, Zeitdruck oder Hilfsbereitschaft aus, um an Informationen oder Zugänge zu kommen. Phishing ist eine Form davon, aber auch ein Anruf „von der IT“ gehört dazu.
+    </p>
+
+    <h2 id="mfa"><a href="#mfa" class="heading-anchor">MFA (Mehrfaktor-Authentifizierung)</a></h2>
+    <p>
+      Ein zweiter Nachweis beim Anmelden, zusätzlich zum Passwort. Das kann ein Code aus einer App, ein Sicherheitsschlüssel oder eine Bestätigung auf dem Handy sein. Selbst wenn dein Passwort gestohlen wird, reicht es dann allein nicht mehr aus.
+    </p>
+
+    <h2 id="passkey"><a href="#passkey" class="heading-anchor">Passkey</a></h2>
+    <p>
+      Ein modernes Anmeldeverfahren ohne Passwort. Statt eines Passworts bestätigst du die Anmeldung mit deinem Gerät, zum Beispiel per Fingerabdruck oder Gesichtserkennung. Es gibt kein Passwort, das abgeschrieben oder erraten werden kann.
+    </p>
+
+    <h2 id="credential-stuffing"><a href="#credential-stuffing" class="heading-anchor">Credential Stuffing</a></h2>
+    <p>
+      Angreifer nehmen Passwörter aus einem alten Datenleck und probieren sie automatisch bei vielen anderen Diensten aus. Wer überall dasselbe Passwort nutzt, öffnet damit viele Türen gleichzeitig. Ein Passwort-Manager mit eigenen Passwörtern pro Dienst verhindert das.
+    </p>
+
+    <h2 id="ransomware"><a href="#ransomware" class="heading-anchor">Ransomware</a></h2>
+    <p>
+      Schadsoftware, die Dateien oder ganze Systeme verschlüsselt und dich für die Freigabe bezahlen lassen will. Wichtig: Ein Backup, das getrennt vom Hauptsystem liegt, ist der beste Schutz — und die Zahlung ist keine Garantie für die Freigabe.
+    </p>
+
+    <h2 id="ceo-fraud"><a href="#ceo-fraud" class="heading-anchor">CEO-Fraud</a></h2>
+    <p>
+      Eine Betrugsmasche, bei der sich jemand als Chef oder Chefin ausgibt und per E-Mail oder Chat eine dringende Überweisung oder vertrauliche Daten verlangt. Der Trick ist Druck: „Bin gerade im Termin, bitte sofort erledigen.“ Immer über einen bekannten zweiten Weg nachfragen.
+    </p>
+
+    <h2 id="shoulder-surfing"><a href="#shoulder-surfing" class="heading-anchor">Shoulder Surfing</a></h2>
+    <p>
+      Jemand schaut dir über die Schulter, während du Passwörter eingibst, Nachrichten liest oder vertrauliche Daten anschaust. Typische Orte sind Bahn, Flughafen, Café und Großraumbüro. Bildschirmschutz und ein wacher Blick nach links und rechts helfen.
+    </p>
+
+    <h2 id="schatten-it"><a href="#schatten-it" class="heading-anchor">Schatten-IT</a></h2>
+    <p>
+      Software, Dienste und Geräte, die im Unternehmen genutzt werden, ohne dass die IT davon weiß. Ein privater Cloud-Speicher für Kundendaten oder ein selbst eingerichteter Chat-Bot sind Beispiele. Praktisch gedacht — aber niemand kann sie absichern oder aktualisieren.
+    </p>
+
+    <h2 id="3-2-1-backup"><a href="#3-2-1-backup" class="heading-anchor">3-2-1-Backup</a></h2>
+    <p>
+      Eine einfache Backup-Regel: mindestens drei Kopien deiner Daten, auf zwei verschiedenen Datenträgern, und eine davon an einem anderen Ort. So überstehst du einen Defekt, ein versehentliches Löschen und in vielen Fällen auch einen Ransomware-Angriff.
+    </p>
+
+    <h2 id="quishing"><a href="#quishing" class="heading-anchor">Quishing</a></h2>
+    <p>
+      Phishing über QR-Codes. Der Code führt auf eine gefälschte Anmeldeseite oder startet einen Download. Weil der Link nicht sichtbar ist, fällt die Prüfung schwerer. Wenn ein QR-Code unerwartet auftaucht, lieber direkt über die offizielle Adresse gehen.
+    </p>
+
+    <h2 id="vishing"><a href="#vishing" class="heading-anchor">Vishing</a></h2>
+    <p>
+      Phishing per Telefon („voice“ + „phishing“). Jemand ruft an, gibt sich als IT, Bank oder Vorgesetzte Person aus und bittet um einen Code, ein Passwort oder eine Fernsteuerung deines Rechners. Auflegen und über eine selbst recherchierte Nummer zurückrufen.
+    </p>
   </article>
 </Base>

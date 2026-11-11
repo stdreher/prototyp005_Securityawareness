@@ -1,7 +1,7 @@
 ---
-title: "Interview"
+title: "Kurz zu dir"
 slug: interview
-description: "Tell us about yourself so we can tailor the course to you."
+description: "Fünf freiwillige Fragen, damit der Kurs zu deinem Arbeitsalltag passt."
 order: 1
 quiz: false
 agentOnly: true
@@ -9,8 +9,12 @@ agentInstructions: |
   This lesson is a short interview. The student's answers personalize the
   rest of the course. Every question can be skipped.
 
-  Present ALL questions at once interactively. Include a "Skip" option in
-  every question.
+  Teach in German. The student is a German-speaking employee, not a
+  security professional. Keep your own wording in German even though these
+  instructions are in English.
+
+  Present ALL questions at once interactively. Include a "Überspringen"
+  option in every question. Do not mark any option as recommended.
 
   {interviewQuestions}
 
@@ -18,9 +22,19 @@ agentInstructions: |
   PUT /api/profile/{studentId} request. Include only the fields the
   student answered.
 
-  Acknowledge their answers, then mark the lesson complete.
+  Then briefly reflect back what you understood in one or two sentences
+  (for example: "Du arbeitest viel unterwegs und hast schon mal eine
+  Betrugsmail bekommen — dann schauen wir uns besonders die unterwegs
+  an."). Do not flatter, do not overpromise. Acknowledge their answers,
+  then mark the lesson complete.
 ---
 
-In this lesson, your AI tutor will ask you a few optional questions about your background and preferences. Your answers help tailor the rest of the course to you.
+In dieser ersten Lektion stellt dir dein KI-Agent ein paar Fragen zu deinem Arbeitsalltag. Deine Antworten steuern, welche Beispiele du später bekommst: eine Buchhalterin sieht andere Mails als ein Entwickler, und wer viel reist, braucht andere Tipps als jemand im Großraumbüro.
 
-All questions are optional. Skip any you'd rather not answer.
+Alle Fragen sind freiwillig. Du kannst jede überspringen. Es werden keine personenbezogenen Daten gespeichert, nur deine Auswahl aus den vorgegebenen Antworten.
+
+## Warum überhaupt Fragen?
+
+Security-Awareness-Schulungen scheitern oft an einer einfachen Sache: Sie behandeln alle gleich. Ein Kurs, der vom Praktikanten bis zur Geschäftsführung dieselben Folien zeigt, trifft niemanden richtig. Der eine langweilt sich, die andere versteht die Hälfte nicht.
+
+Deshalb fragt dich dieser Kurs zuerst, wo du arbeitest, wie viel du schon weißt und wie du am liebsten lernst. Danach richtet sich der Ton — und die Beispiele.
